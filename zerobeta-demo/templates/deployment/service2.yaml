@@ -15,7 +15,10 @@ spec:
         app.kubernetes.io/name: service2
     spec:
       containers:
-      - name: service1
+      - name: service2
         image: 028429714899.dkr.ecr.ap-northeast-1.amazonaws.com/server2:1.0
+        resources:
+          requests:
+            cpu: "250m"
         ports:
         - containerPort: 80
